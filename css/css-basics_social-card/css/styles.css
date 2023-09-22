@@ -2,10 +2,53 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(196, 195, 195);
+  margin: 0px;
+  padding: 0px;
+}
+
+article {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  line-height: 2;
+}
+
 img {
   border-radius: 5%;
 }
 
 h2 {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+}
+
+.regular {
+  font-weight: medium;
+  font-size: medium;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+}
+
+.light {
+  font-weight: lighter;
+  font-size: medium;
+  color: grey;
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  color: cornflowerblue;
+  border: 0;
+  background: white;
+  margin: 0px;
+  padding: 0px;
 }
