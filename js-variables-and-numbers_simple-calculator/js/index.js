@@ -1,7 +1,7 @@
 console.clear();
 
-const operand1 = 12;
-const operand2 = 4;
+let operand1 = 12;
+let operand2 = 4;
 
 /*
 Mathematical operations
@@ -83,24 +83,42 @@ const divideByTwoButton = document.querySelector('[data-js="divide-by-two"]');
 
 increaseByOneButton.addEventListener("click", () => {
   // 7. Increase the value of "operand1" by 1. Log the new value to the console.
+
+  operand1 += 1;
+  console.log("increase the value by 1 = ", operand1);
 });
 
 increaseByFiveButton.addEventListener("click", () => {
   // 8. Increase the value of "operand1" by 5. Log the new value to the console.
+
+  operand1 += 5;
+  console.log("increase the value by 5 = ", operand1);
 });
 
 decreaseByOneButton.addEventListener("click", () => {
   // 7. Decrease the value of "operand1" by 1. Log the new value to the console.
+
+  operand1 -= 1;
+  console.log("decrease the value by 1 = ", operand1);
 });
 
 decreaseByFiveButton.addEventListener("click", () => {
   // 8. Decrease the value of "operand1" by 5. Log the new value to the console.
+
+  operand1 -= 5;
+  console.log("decrease the value by 5 = ", operand1);
 });
 
 multiplyByTwoButton.addEventListener("click", () => {
   // 11. Multiply the value of "operand1" by 2. Log the new value to the console.
+
+  operand1 *= 2;
+  console.log("multiply the value by 2 = ", operand1);
 });
 
 divideByTwoButton.addEventListener("click", () => {
   // 12. Divide the value of "operand1" by 2. Log the new value to the console.
+
+  operand1 /= 2;
+  console.log("divide the value by 2 = ", operand1);
 });
