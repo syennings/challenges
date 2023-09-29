@@ -18,7 +18,7 @@ addButton.addEventListener("click", () => {
 
   const addition = operand1 + operand2;
 
-  console.log(addition);
+  console.log("addition of numbers = ", addition);
 });
 
 subtractButton.addEventListener("click", () => {
@@ -26,21 +26,21 @@ subtractButton.addEventListener("click", () => {
 
   const substraction = operand1 - operand2;
 
-  console.log(substraction);
+  console.log("substraction of numbers = ", substraction);
 });
 
 multiplyButton.addEventListener("click", () => {
   // 3. Multiply the two operands and store the result in a variable. Log the variable's value to the console.
 
   const multiplication = operand1 * operand2;
-  console.log(multiplication);
+  console.log("multiplaction of numbers = ", multiplication);
 });
 
 divideButton.addEventListener("click", () => {
   // 4. Divide the two operands and store the result in a variable. Log the variable's value to the console.
 
   const division = operand1 / operand2;
-  console.log(division);
+  console.log("division of numbers = ", division);
 });
 
 exponentButton.addEventListener("click", () => {
@@ -48,7 +48,7 @@ exponentButton.addEventListener("click", () => {
 
   const exponentialValue = operand1 ** operand2;
 
-  console.log(exponentialValue);
+  console.log("first number to the value of the second = ", exponentialValue);
 });
 
 moduloButton.addEventListener("click", () => {
@@ -56,7 +56,7 @@ moduloButton.addEventListener("click", () => {
 
   const remainder = operand1 % operand2;
 
-  console.log("remainder when divinding first and second number", remainder);
+  console.log("remainder when divinding first and second number = ", remainder);
 });
 
 /*
