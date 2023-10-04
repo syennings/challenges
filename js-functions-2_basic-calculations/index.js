@@ -32,6 +32,7 @@ function multiply(a, b) {
   const multiplication = a * b;
   return multiplication;
 }
+// or just return a * b
 
 function divide(a, b) {
   const division = a / b;
