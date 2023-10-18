@@ -10,7 +10,7 @@ export async function fetchNewColor() {
     if (response.ok) {
       // Success (Good Response)
       const data = await response.json();
-      console.log("color", data);
+      console.log("color:", data);
 
       const closestNamedHex = data.name.closest_named_hex;
       const randomColorName = data.name.value;
