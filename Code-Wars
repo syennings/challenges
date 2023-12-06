@@ -1,0 +1,583 @@
+
+
+// function sum(a,b) {
+//   const res = a+b
+//   return res
+// }
+
+// const result = sum(3, 5);
+
+
+// if else function
+
+// function evenOrOdd (num) {
+//   if (num % 2 === 0) {
+//     return 'even'
+//   } 
+//   else {
+//     return 'odd'
+//        }
+  
+//   }
+
+// console.log(evenOrOdd(7))
+
+
+//arrow function
+
+// const sum = function (a,b) {
+//   const res = a+b
+//   return res
+// }
+
+// console.log(sum (3,5))
+
+// implicit return 
+
+
+// ≈
+
+
+// console.log(sum(3,5))
+
+// const evenOrOdd = (num) => num % 2 === 0 ? 'even' : 'odd'
+  
+
+// console.log(evenOrOdd(7))
+
+
+// function getGreeting() {
+  
+//   const currentTime = new Date().getHours();
+
+//    if currentTime =  6 - 12 {
+//     return "Good Morning"
+//    }
+  
+//   else if currentTime = 13 - 18 {
+//     return = "Good Afternoon"
+//   }
+  
+//   else if currentTime = 19 - 22 {
+//     return= "Good Evening"
+//   }
+  
+//   else if currentTime = 23 - 5 {
+    
+//   } return=  "Good Night"
+// }
+
+
+// function getGreeting() {
+//   const currentTime = new Date().getHours();
+  
+//   if (currentTime >= 6 && currentTime <= 12) {
+//     return "Good Morning";
+//   } else if (currentTime >= 13 && currentTime <= 18) {
+//     return "Good Afternoon";
+//   } else if (currentTime >= 19 && currentTime <= 22) {
+//     return "Good Evening";
+//   } else {
+//     return "Good Night";
+//   }
+// }
+
+// // Example usage:
+// const greeting = getGreeting();
+// console.log(greeting);
+
+
+
+// function sum(a,b,c) { 
+//   const add3 = a+b+c;
+//   return add3;
+
+// }
+
+// console.log(sum(1,2,3));
+
+
+// function repeatTenTimes(string) {
+//   const text = string.repeat(10);
+//   return text;
+// }
+
+// console.log(repeatTenTimes("hello"));
+
+
+
+
+
+// const greeting = "hello";
+// const firstName = "klaus";
+
+// const text = `${greeting}  ${firstName} - welcome to our page` ; // string interpolation
+// console.log("text:", text);
+
+// const concatenatedString = greeting.concat(" ", firstName);
+// console.log("concatenated String", concatenatedString);
+
+
+// const firstLetter= "K";
+// console.log(` Does ${firstName} start with ${firstLetter}? Answer: ${firstName.toUpperCase(). startsWith(firstLetter.toUpperCase())}`); 
+
+
+
+// const nameToUpperCase = firstName.toUpperCase();
+// console.log("nameToUpperCase", nameToUpperCase);
+
+
+
+
+// const lastName = "Stille";
+
+// if(lastName) {
+//   console.log("with lastName");
+//   console.log(`${greeting} ${lastName}`);
+// } 
+// else {
+//   console.log(`${greeting} ${firstName}`);
+// }
+
+
+
+// //ternary operator
+// // condition? ifTrue:ifFalse
+
+
+// const withLastName=(`${greeting} ${lastName}`);
+// const withoutLastName=(`${greeting} ${firstName}`);
+
+
+
+// const result = (lastName ? withLastName:withoutLastName);
+// console.log(result);
+
+
+
+// console.log("sanity test");
+
+
+
+// let string = "a";
+// while(string.length <= 8) {
+//   console.log(string);
+//   string += "a"
+// }
+
+// let array = ["bananna", "apple", "pear", "lime"]
+
+// for (let i=0; i<= array.length-1; i++){
+//   console.log(i);
+//   console.log(array[i])
+// }
+
+// const user = {
+//   name:"alex",
+//   age: 29, 
+//   email: "alex@gmail.com"
+  
+// }
+
+// for (let key in user) {
+//   // console.log ("key", key);
+//   // console.log ("value", user[key]);
+  
+//   console.log(`${key.toUpperCase()} : ${user[key]}`)
+// }
+
+
+// let fruits = ["bananna", "apple", "pear", "lime"];
+// for (let fruit of fruits) {
+//   console.log(fruits)
+// }
+
+// const recipes = [
+//   {
+//     title: "Crepes",
+//     duration: 60,
+//     ingredients: ["butter", "flour", "eggs", "milk", "salt"],
+//     servings: 3,
+//   },
+//   {
+//     title: "Scrambled Eggs",
+//     duration: 20,
+//     ingredients: ["eggs", "milk", "salt"],
+//     servings: 2,
+//   },
+//   {
+//     title: "Vegan Salmon",
+//     duration: 60 * 24 * 3, // 3 days
+//     ingredients: [
+//       "carrots",
+//       "olive oil",
+//       "nori sheets",
+//       "liquid smoke",
+//       "soy sauce",
+//     ],
+//     servings: 10,
+//   },
+//   {
+//     title: "Carrot Cake",
+//     duration: 120,
+//     ingredients: ["carrots", "flour", "eggs", "salt", "milk", "sugar"],
+//     servings: 10,
+//   },
+// ];
+
+/*
+ 1: `map` exercises
+*/
+
+// const onlyTitles = recipes.map((recipes) => {
+//   return { title: recipes.title };
+// });
+
+// console.log("titles:", onlyTitles);
+// // ['Crepes', ...]
+
+// const titlesWithDuration = recipes.map((recipes) => {
+//   return {
+//     title: recipes.title,
+//     duration: [`${recipes.duration} minutes`],
+//   };
+// });
+
+// console.log("titles with duration:", titlesWithDuration);
+
+// const timePerServing = recipes.map((recipes) => {
+//   const newTimePerServing = recipes.duration / recipes.servings;
+
+//   return { newTimePerServing }
+   
+// });
+
+// console.log("time per serving", timePerServing);
+
+
+// const allTitlesInOneString = recipes.map ((recipes) => recipes.title).join (',');
+// console.log(allTitlesInOneString);
+
+// const recipesThatOnlyTake60minutesOrLess = recipes.filter(
+//   (recipes) => recipes.duration <= 60
+// );
+// console.log(recipesThatOnlyTake60minutesOrLess);
+
+
+// const allRecipesWithMoreThan2Servings = recipes.filter(
+//   (recipes) => recipes.servings >= 2
+// );
+// console.log("allRecipesWithMoreThan2Servings", allRecipesWithMoreThan2Servings);
+
+// const allRecipesWithTitlesLongerThan12Characters = recipes.filter(
+//   (recipes) => recipes.title.length > 12
+// );
+
+// console.log(
+//   "allRecipesWithTitlesLongerThan12Characters",
+//   allRecipesWithTitlesLongerThan12Characters
+// );
+
+
+// EXTRA:
+
+// HINT: use first map() and then Array.prototype.join() with "method chaining" like so:
+// myArray.map(...).join(', ');
+
+// const allTitlesInOneString = null; // 'Crepes, Scrambled Eggs, ...'
+
+// For more information how to join an array,
+// see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join#joining_an_array_four_different_ways
+
+/*
+ 2: `filter` exercises
+*/
+
+// const recipesThatOnlyTake60minutesOrLess = null;
+
+// const allRecipesWithMoreThan2Servings = null;
+
+// const allRecipesWithTitlesLongerThan12Characters = null;
+
+// export {
+//   onlyTitles,
+//   titlesWithDuration,
+//   timePerServing,
+//   allTitlesInOneString,
+//   recipesThatOnlyTake60minutesOrLess,
+//   allRecipesWithMoreThan2Servings,
+//   allRecipesWithTitlesLongerThan12Characters,
+// };
+
+
+
+
+// function points(games) {
+//   let total = 0;
+//   for (let result of games) {
+//     console.log(result[0], result[2])
+   
+    
+//    if (result[0] > result[2]) {
+//       total += 3;
+  
+//    }
+   
+//     else if (result[0] === result[2]) {
+//       total= total+ 1;
+//     }
+    
+    
+//   }
+//    return total
+
+// }
+
+
+
+
+
+   
+   
+  
+  
+  // }
+  // declare a variable 'points'
+  // iterate over 'games' array
+  // for every string: access the first number and the second number and compare them like in the instructions
+  // -> change 'points' accordingly
+  // after the loop -> return 'points'
+// }
+
+
+// if x > y: 3 points (win)
+// if x < y: 0 points (loss)
+// if x = y: 1 point (tie)
+
+
+// points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"])
+// //  30
+
+
+
+
+// let birds =  ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"];
+
+
+// function gooseFilter (birds){
+  
+// let geese =  ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  
+//   const result = birds.filter(birds => !geese.includes(birds))
+//   return result
+  
+// }
+
+// gooseFilter(birds)
+
+// DESCRIPTION:
+// You work in the best consumer electronics corporation, and your boss wants to find out which three products generate the most revenue. Given 3 lists of the same length like these:
+
+// products: ["Computer", "Cell Phones", "Vacuum Cleaner"]
+// amounts: [3, 24, 8]
+// prices: [199, 299, 399]
+// return the three product names with the highest revenue (amount * price).
+
+// Note: if multiple products have the same revenue, order them according to their original positions in the input list.
+
+
+// top3(["Computer", "Cell Phones", "Vacuum Cleaner"], [3, 24, 8], [199, 299, 399]);
+
+// function top3(products, amounts, prices) {
+                              
+// const objectArray = products.map((product, index) => ({
+//     name: product,
+//     revenue: (amounts[index] * prices[index]) 
+// }));
+// console.log("object array", objectArray);
+
+
+
+//  const sorted = objectArray.sort((a, b) => (b.revenue - a.revenue) || a.index - b.index);
+
+//   return sorted.slice(0, 3).map(product => product.name);
+
+  
+ 
+
+
+
+//   const sortedArrat = newArray.sort((a, b) => b.revenue - a.revenue);
+//   console.log(sortedArray)
+    
+//   }
+  
+  
+
+    
+
+  // create an array of objects -> map
+  // [{name: 'Computer', revenue: 3 * 199}, {}, {}]
+  // sort the array by revenue
+  // map over array change obj -> string (name)
+  // return first three elements
+
+
+
+                          
+  //   const newArray = products.map((product, index) => {
+  //   name: product,
+  //   revenue: amounts * prices;
+  //   console.log(newArray)
+  // }
+    
+  
+
+
+
+
+// const array1 = [1, 4, 9, 16];
+
+// // Pass a function to map
+// const map1 = array1.map((x) => x * 2);
+
+// console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+
+
+
+
+
+// var string = "01000000X000X011X0X"
+
+
+
+//   function infected(string) {
+    
+//     let Total = 0;
+//     let Infected = 0;
+    
+//     var splitString = string.split('X');
+//     console.log("splitString", splitString);
+    
+//     for (let i = 0; i < splitString.length; i++) {
+//     Total += splitString[i].length;
+    
+//     if (splitString[i].includes('1')) {
+//       Infected += splitString[i].length;
+//     }
+//     }
+      
+//     console.log("total", Total);
+//     console.log("infected", Infected);
+
+//     let percentage = 100*Infected/Total;
+    
+//     console.log("percentage", percentage)
+
+    
+    
+    
+    
+//   }
+    
+    
+// infected(string)
+  // create two variables: total and infected
+  // split the string s by 'X'
+  // loop over the array
+  // for every string add the length of the string
+  // to total, if the string contains a '1' also add
+  // the length to 'infected'
+  // after the loop return the percentage using the
+  // formula
+
+
+
+//   1. look through the array
+//   2. if it has the word flick - return the opposite
+//   3. if not not - return false
+
+
+// const arr = ["codewars", "flick", "code", "wars"];
+
+
+
+// function flickSwitch(arr){
+  
+//   const newArray =   arr.map(val => (val === 'flick' ? !val : true));
+  
+//   return newArray
+
+  
+// }
+
+// flickSwitch(arr)
+
+  
+// iterate over recipe, check if the ingredient is available. if it is available divide available by recipe. take the lowest numer and round it down. 
+    
+// let recipe = {flour: 500, sugar: 200, eggs: 1};
+// let available = {flour: 1200, sugar: 1200, eggs: 5, milk: 200};
+
+// function cakes(recipe, available) {
+  
+// const numbers = []
+  
+//   for (let ingredient in recipe)  {
+//     // console.log(recipe[ingredient])
+//     if (!available[ingredient]) return 0
+//    numbers.push(Math.floor(available[ingredient] / recipe[ingredient]))
+//   }
+  
+//   return Math.min(...numbers)
+//   }
+       
+// cakes(recipe, available)
+    
+    
+
+
+
+
+
+// cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}); 
+  
+
+// - look into the array
+// - find the first character
+//              see how many times the character exists?
+
+
+  
+const inputString = "absaabbbbbsss";
+
+function count(string) {
+  let object = {};
+
+  // for (let character of string) {
+    // console.log(character);
+    // object[character] = (object[character] || 0) + 1;
+    
+  string.split('').forEach(character => {
+    if (object[char]) {
+      obj[char]++
+    } else {
+      object[char]=1
+    }
+     
+  })
+     return object;
+  }
+
+
+
+const result = count(inputString);
+
+console.log(result);
+
+
+
+
+  
+
